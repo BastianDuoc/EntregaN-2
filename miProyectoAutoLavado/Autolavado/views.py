@@ -138,7 +138,8 @@ def modificarinsumo(request,id):
 
 def ubicacion(request):
     return render(request,'core/Ubicacion.html')
-
+    
+@login_required(login_url='/login/')
 @permission_required('Autolavado.view_insumos')
 def admin_insumos(request):
     insumos = Insumos.objects.all()
