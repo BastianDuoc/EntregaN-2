@@ -1,0 +1,562 @@
+
+/*menu nav*/
+main {
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    background: hsla(166, 20%, 44%, 0.7);
+}
+
+
+/* ocultar el checkbox*/
+
+#btn-menu {
+    display: none;
+}
+
+
+/* caracteristicas de la etiqueta */
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover {
+    cursor: pointer;
+    
+}
+
+
+/* elementos del menu */
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu li:hover {
+    background: hsla(166, 20%, 44%, 0.7);
+}
+
+.menu li {
+    border-right: solid 1px hsla(166, 20%, 44%, 0.7);
+}
+
+@media screen and (max-width:750px) {
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background:  hsla(166, 20%, 44%, 0.7);
+        width: 50%;
+        margin-left: -50%;
+        transition: all 0.5s;
+    }
+    .menu li {
+        border-top: solid 1px white;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    #btn-menu:checked~.menu {
+        margin: 0;
+    }
+}
+
+/*menu nav*/
+*
+{
+    /*quita los bordes de la pagina*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /*tipografia de toda la pagina*/
+}
+
+.contenedor {
+    padding: 60px 0;
+    /*separacion de 60 pixeles hacia abajo eentre cada contenedor*/
+    width: 90%;
+    max-width: 1000px;
+    /*width maximo de 1000 pixeles*/
+    margin: auto;
+    /*centra todo automaticamente*/
+    overflow: hidden;
+    /*esconde todo lo que se salga de los contenedores*/
+}
+
+.titulo {
+    color: green;
+    /*color de los titulos*/
+    font-size: 30px;
+    /*tamaño de los titulos*/
+    text-align: center;
+    /*posision de los titulos*/
+    margin-bottom: 60px;
+    /*para destinguirlo de los textos de cada seccion*/
+}
+
+/*header*/
+header {/**/
+    width: 100%;
+    height: 550px;
+    background: #403B4A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(63, 51%, 82%, 0.70), hsla(260, 11%, 26%, 0.70)), url(../img/Porsche-Cayenne-black.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(63, 51%, 82%, 0.70), hsla(260, 11%, 26%, 0.70)), url(../img/Porsche-Cayenne-black.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav{
+    text-align: right;
+    padding: 30px 10px 0 0;
+}
+
+nav > a{
+    color: white;
+    font-weight: 300;
+    text-decoration:none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration:underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430PX;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.ola{
+    margin-top:-55px ;
+    position: absolute;
+    bottom:0 50;
+    width: 100%;
+    
+}
+
+.textos-header h1{
+    font-size:50px;
+    color: white;
+    align-items: center;
+
+}
+
+.contenedor-mision-vision {
+    display: flex;
+    justify-content: space-evenly;/*reparte el espacio equitativamente*/
+}
+
+.contenedor-Ubica {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor .Ubicacion{
+   
+    justify-content: space-evenly;
+    
+}
+
+.MyV{
+    width: 30%;
+
+}
+
+.mision-vision .contenedor-textosMyV{
+    width: 48%;
+}
+
+.contenedor-textosMyV h3{
+    margin-bottom:15px ;
+}
+
+.contenedor-textosMyV h3 span{
+    background :grey ;
+    color:white ;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow:0 0 6px 0 rgba(0,0,0,.5) ;
+    margin-right: 5px;
+}
+
+.contenedor-textosMyV p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*galeria*/
+.Servicios{
+    background: #f2f2f2;
+    
+}
+
+.galeria-servicios{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;/*mantener al margen entre las imagenes*/
+}
+
+.imagen-servicios{
+    width: 24%;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px 0 rgba(0,0,0,.5) ;
+
+}
+
+.imagen-servicios > img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imagen-jefe{
+    width: 24%;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow:hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow:0 0 6px 0 rgba(0,0,0,.5) ;
+
+}
+
+.imagen-jefe > img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);/*para ocultar el color que se superpone al acercar el cursor*/
+    background: hsla(166, 20%, 44%, 0.7);
+    transition: transform .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.hover-galeria img{
+    width:200px ;
+}
+
+.hover-galeria p{
+    color: #fff ;
+}
+.imagen-servicios:hover .hover-galeria{
+    transform: scale(1);
+}
+
+.cards{
+    display: flex;
+    justify-content: left;
+}
+
+.cards2 .Gmap{
+    
+    display: flex;
+    width: 46%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cards2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+.cards2 .card2{
+    background: hsla(166, 20%, 44%, 0.7);
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
+}
+
+.cards2 .card2 img{/*establece el tamaño de las imagenes ademas de dejarlas con forma circular*/
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid  #f2f2f2;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards2 .card2 > .contenido-texto-card{/*centra los comentarios y los deja de color blanco*/
+    width: 60%;
+    color: #f2f2f2;
+}
+
+.cards2 .card2 > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+
+.cards .card{
+    background: hsla(166, 20%, 44%, 0.7);
+    display: flex;
+    width: 48%;
+    height: 210px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    margin-left: 5px;
+}
+
+.cards .card img{/*establece el tamaño de las imagenes ademas de dejarlas con forma circular*/
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid  #f2f2f2;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{/*centra los comentarios y los deja de color blanco*/
+    width: 60%;
+    color: #f2f2f2;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 200;
+    padding-top: 5px;
+}
+
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid  #f2f2f2;
+}
+
+.content-foo{
+    text-align: center;
+    text-decoration: none;
+}
+
+.content-foo h4{
+    color:  hsla(166, 20%, 44%, 0.7);
+    border-bottom: 3px solid  hsla(166, 20%, 44%, 0.7);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+}
+
+.content-foo p{
+    color:hsla(166, 20%, 44%, 0.7);
+    text-decoration: none;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color:  hsla(166, 20%, 44%, 0.7);
+    text-decoration: none;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .cards{
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .cards2{
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .cards .card{
+        width: 90%;
+        margin-left: 10px;
+
+        
+    }
+    .cards2 .card2{
+        width: 90%;
+        margin-left: 10px;
+
+        
+    }
+    .cards2 .Gmap{
+        margin-bottom: 30px;
+        width: 90%;
+        margin-left: 10px;
+    }
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+    .cards .card{
+        margin-bottom: 30px;
+    }
+    .cards2 .card2{
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards2 .card2{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards2 .Gmap{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+    .cards2 .card2 img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color:  hsla(166, 20%, 44%, 0.7);
+        border-bottom: 1px solid hsla(166, 20%, 44%, 0.7);
+        padding-bottom: 70px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}
+
+/*estilol de la galeria*/
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+#galeria div {
+    padding: 10px;
+}
+
+#galeria div img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+#galeria div h3 {
+    text-align: center;
+}
+

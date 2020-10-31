@@ -1,0 +1,79 @@
+{% extends 'core/BasePaginaWeb.html' %}
+{% load static %}
+{% block Contenido %}
+
+        <section class="textos-header">
+            <h1>
+                Galeria
+            </h1>
+        </section>
+
+        <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.87 C150.00,149.67 349.20,-49.89 500.00,49.87 L500.00,149.67 L-0.00,149.67 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="Servicios">
+            <div class="contenedor">
+                <h2 class="titulo">Galeria de Fotos</h2>
+
+                <section id="galeria">
+                    {% for car in lista_AutosGal %}
+                    <div>
+                        <a href="{{car.Imagen.url}}" data-lightbox="Autos" data-title="{{car.Descripcion}}">
+                            <img src="{{car.Imagen.url}}" alt="">
+                        </a>
+
+                    </div>
+                    {% endfor %}
+                </section>
+                
+                <h2 class="titulo">Servicios</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="{% static 'img/Lavado_total.png' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Lavado Completo</h4>
+                            <p>Lavado Exterior Completo y Profundo</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Lavado_interior.png' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Limpieza de Interiores</h4>
+                            <p>Lavado de Butacas , Piso y Panel </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Mantenimiento.png' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Revision Tecnica</h4>
+                            <p>Revision tecnica y Correcion de Errores</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Lavado_motor.png' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Limpieza de Motor</h4>
+                            <p>Limpieza Profunda de Motor , Radiador , Turbo , Bloque etc</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/Cambio_aceite.png' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Cambio de Aceite</h4>
+                            <p>Cambio de Aceite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+    </main>
+    
+
+{% endblock Contenido %}

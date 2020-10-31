@@ -1,0 +1,43 @@
+{% extends 'core/BasePaginaWeb.html' %}
+{% load static %}
+{% block Contenido %}
+
+        <section class="textos-header">
+            <h1>
+                Mision y Vision
+            </h1>
+        </section>
+
+        <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.87 C150.00,149.67 349.20,-49.89 500.00,49.87 L500.00,149.67 L-0.00,149.67 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor mision-vision">
+            <h2 class="titulo">Mision y Vision</h2>
+            <div class="contenedor-mision-vision">
+                <img class="MyV" src="{% static 'img/015-employee.png' %}" alt="">
+                <div class="contenedor-textosMyV">
+                    <h3><span>1</span>Mision</h3> <p>
+                    {% for misvis in MisionVisionL %}
+                        {{misvis.mision}}
+                    {% endfor %}
+                    </p>
+                    <h3><span>2</span>Vision</h3>
+                    <p>
+                    {% for misvis in MisionVisionL %}
+                        {{misvis.vision}}
+                    {% endfor %}
+                    </p>
+                    
+                        
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+{% endblock Contenido %}

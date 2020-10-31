@@ -1,0 +1,55 @@
+{% extends 'core/BasePaginaWeb.html' %}
+{% load static %}
+{% block Contenido %}
+<section class="textos-header">
+            <h1>
+                Autolavado HotWheels 
+            </h1>
+        </section>
+
+        <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.87 C150.00,149.67 349.20,-49.89 500.00,49.87 L500.00,149.67 L-0.00,149.67 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+    </header>
+    <main>
+        
+        <section class="contenedor Servicios">
+            <h2 class="titulo">Servicios</h2>
+            
+                <div class="slider">
+                    <ul>
+                        {% for car in lista_AutosIni %}
+                        <li><img src="{{car.Imagen.url}}" alt=""></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+           
+        </section>
+        <section>
+            <div class="contenedor clientes ">
+                <h2 class="titulo">Comentarios de nuestros clientes</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="{% static 'img/persona 1.jpg' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Hernan</h4>
+                            <p>Mande a lavar mi camioneta y cuando la fui a buscar estaba casi como nueva excelente
+                                servicio 100% recomendadicimo.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/persona2.jpg' %}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Xiao Chen</h4>
+                            <p>當我看到這些設施時，我說那真是不可思議，這是個洗車的地方，除了提供便利的翻譯服務之外，還提供優質的服務。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+    {% endblock Contenido %}

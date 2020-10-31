@@ -1,0 +1,44 @@
+{% extends 'core/BasePaginaWeb.html' %}
+{% load static %}
+{% block Contenido %}
+        <section class="textos-header">
+            <h1>
+                Registro Insumos
+            </h1>
+        </section>
+
+        <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.87 C150.00,149.67 349.20,-49.89 500.00,49.87 L500.00,149.67 L-0.00,149.67 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+    </header>
+    <script>
+        function ir(){location.href="/admin_insumos/";}
+    </Script>
+    <main>
+        <div id="contenido">
+            <div id="section">
+                    <section class="registro-forma">
+                        <h4> Registro de Insumos</h4>
+                        
+                        <h2>{{msg}}</h2>
+                        
+                        <form action="{% url 'RegistroInsumos' %}" method="POST">
+                        {% csrf_token %}
+                            <input class="txts" type="text" name="NombreInsumo" id="txtNombreInsumos" placeholder="Nombre del Producto o Insumo" maxlength="30" required>
+                            <input class="txts" type="text" name="DescripcionInsumo" id="txtDescripcionInsumo" placeholder="Descripcion del Producto o Insumo" maxlength="30" required>
+                            <input class="txts" type="number" name="PrecioInsumo" id="txtPrecioInsumo" placeholder="Precio del Producto o Insumo" maxlength="30" required>
+                            <input class="txts" type="number" name="CantidadInsumo" id="txtCantidadInsumo" placeholder="ingrese cantidad" min="1" max="10"required>
+                            <input class="boton" type="submit" value="Agregar Insumo">
+                            <input class="boton" type="submit" onclick="ir()" value="Administrar Insumos">
+                        </form>
+                    </section>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+
+{% endblock Contenido %}

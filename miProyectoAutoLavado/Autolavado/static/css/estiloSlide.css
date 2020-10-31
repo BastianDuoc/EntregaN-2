@@ -1,0 +1,51 @@
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite alternate;/*distribulle la aniumacion en 20 para luego en la programacion del tiempo de diracion de cada imagen medirlo en porcentajes*/
+    animation-timing-function: ease-in;/*hace que la animacion empiese lenta*/
+    margin-bottom: 10px;
+    overflow:hidden;
+    position: relative;
+    
+}
+
+.slider li > img {
+    
+   width:100% ;
+   height:500px;
+}
+
+.slider li {
+    list-style: none;
+    width: 100%;
+    height: 70%;
+
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+
+   
+}
+@keyframes cambio {/* permite controlar los frame intermedios en una secuencia de animación CSS*/
+    /*Primera imagen*/
+    0% {margin-left:0;}
+    20% {margin-left:0;}/*durante 4s estara la imageb*/
+    /*Segunda imagen*/
+    25% {margin-left:-100%;}/*y la diferencia entre 20 y 25 sera los segundos (1s) de la animacion*/
+    45% {margin-left:-100%;}
+    /*Tercera imagen*/
+    54% {margin-left:-200%;}
+    70% {margin-left:-200%;}
+    /*Cuarte imagen*/
+    75% {margin-left:-300%;}
+    100% {margin-left:-300%;}
+}

@@ -1,0 +1,74 @@
+*{/*dejas sin espacio en los margenes*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.registro-forma{/*tamaño de la base del fromulario y color*/
+    width: 400px;
+    background: rgba(218, 206, 206, 0.7);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px ;
+    border-radius: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.registro-forma h4{/**derfinimos el tamaño del titulo*/
+    font-size: 22px;
+    margin-bottom: 20px;
+
+
+
+}
+
+
+.txts{/*color ,tamaño y diseño de los txt*/
+    width: 100%;
+    background: hsla(0, 3%, 63%, 0.7);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border:0px  rgb(238, 217, 179);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: 18px;
+    color:white;
+
+}
+
+
+.registro-forma p {/*tamaño del texto antes de las condiciones*/
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.registro-forma a {/*color del texto antes de los terminos*/
+    color: white;
+    text-decoration: none;
+}
+
+.registro-forma a:hover {/*enimacion de terminos y condiciones*/
+    color: white;
+    text-decoration: underline ;
+
+}
+
+.registro-forma .boton{/*color del boton y su diseño*/
+    width: 100%;
+    background:hsla(180, 6%, 48%, 0.7);
+    border: none;
+    padding: 12px;
+    color: whitesmoke;
+    margin:16px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.registro-forma .boton :hover{
+
+    background: hsla(165, 13%, 25%, 0.7);
+    transition: transform .2s;
+}

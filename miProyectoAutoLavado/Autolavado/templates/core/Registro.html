@@ -1,0 +1,54 @@
+{% extends 'core/BasePaginaWeb.html' %}
+{% load static %}
+{% block Contenido %}
+        <section class="textos-header">
+            <h1>
+                Registro Cliente
+            </h1>
+        </section>
+
+        <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M-0.00,49.87 C150.00,149.67 349.20,-49.89 500.00,49.87 L500.00,149.67 L-0.00,149.67 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+    </header>
+    <main>
+
+        <div id="contenido">
+            <div id="section">
+                <form action="" method="POST" >
+                    <section class="registro-forma">
+                        <h4> Registro</h4>
+                        {% csrf_token %} 
+                        <input class="txts" type="text" name="nombre" id="nombres" placeholder="ingrese nombre" required
+                            pattern="[A-Za-z]{3,80}" title="solo texto de entre 3 a 80 caracteres">
+
+                        <input class="txts" type="text" name="apellido" id="apellidos" placeholder="ingrese apellido" required
+                            pattern="[A-Za-z]{3,80}" title="solo texto de entre 3 a 80 caracteres">
+
+                        <input class="txts" type="email" name="correo" id="correos" placeholder="ingrese correo"
+                            required>
+                        <input class="txts" type="text" name="nombreUS" id="nombresUS"
+                            placeholder="ingrese nombre de Usuario" required pattern="[A-Za-z]{5,8}"
+                            title="solo texto de entre 5 a 8 caracteres">
+
+                        <input class="txts" type="password" name="contraseña" id="contraseñas"
+                            placeholder="ingrese contraseña">
+                        
+                        <input class="txts" type="password" name="rcontraseña" id="rcontraseñas"
+                            placeholder="Repita contraseña">
+
+                        <p>Estoy de acuerdo con <a href="">Terminos y condiciones</a></p>
+                        <input class="boton" type="submit" value="registrar" >
+                    </section>
+                </form>
+            </div>
+        </div>
+        <div style="text-align: center; color: red;">  
+            <h2>{{msg}}</h2>
+        </div>
+    </main>
+   
+
+{% endblock Contenido %}
